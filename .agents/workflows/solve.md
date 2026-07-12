@@ -9,6 +9,7 @@ When this workflow is invoked, your first action must be to create a new folder 
 Inside that folder, create the following three files:
 
 1. **`<ProblemName>Explainer.md`**: Write the complete detailed explanation and walkthrough. Structure the content of this file exactly using the following flow:
+   - **Problem Description & Example Test Case:** Always show this first. Provide a clear statement of the problem, constraints, and representative example test case(s) (with sample input, output, and a brief explanation of why the output is correct).
    - **Prerequisite Concepts:** Briefly introduce all the underlying data structures, algorithms, or mathematical concepts needed to tackle this problem.
    - **The Naive Approach:** Briefly mention the trivial/brute-force solution and explicitly state its Time and Space Complexity (Big O). Do not write code for this.
    - **Guided Discovery (The Optimal Approach):** Walk me through the thought process to reach the efficient solution. Use a rhetorical Socratic method. Simulate a loop of: *Note observation -> Invoke curiosity (ask rhetorical questions) -> Build intuition -> Concrete definition*. Do not stop to wait for my answers; guide me through the logic narratively.
@@ -22,6 +23,7 @@ Inside that folder, create the following three files:
 3. **`<problemName>noteBook.ipynb`** (where `<problemName>` is the camelCase version of the problem name, e.g., `subsetSumnoteBook.ipynb`):
    - Must be a valid Jupyter Notebook (JSON format conforming to nbformat v4).
    - Create a quick guide of the same problem, containing the same explanation but much briefer.
+   - The first markdown cell must always show the problem description and example test case first.
    - Structure it with sequentially alternating markdown cells (explainer cells) and code cells (interactive, build-up cells).
    - Each markdown-code pair should build up to the solution step-by-step incrementally.
    - Structure the JSON file exactly like this:
@@ -33,7 +35,10 @@ Inside that folder, create the following three files:
         "metadata": {},
         "source": [
          "# Title / Intro\n",
-         "Brief description..."
+         "## Problem Description\n",
+         "...\n",
+         "## Example Test Case\n",
+         "..."
         ]
        },
        {

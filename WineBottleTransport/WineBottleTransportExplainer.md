@@ -1,6 +1,15 @@
 # Wine Bottle Transport
 
-Given $N$ houses built along a straight line with equal distance between adjacent houses, each house has a certain number of wine bottles they want to buy (negative value, representing demand) or sell (positive value, representing supply). Transporting one bottle of wine from one house to an adjacent house results in one unit of work. The total demand equals the total supply. The task is to find the minimum units of work required to fulfill all the demands.
+## Problem Description & Example Test Case
+Given an array `Arr[]` of size `N` representing `N` houses built along a straight line with equal distance between adjacent houses. Each house has a certain number of wine and they want to buy/sell those wines to other houses. Transporting one bottle of wine from one house to an adjacent house results in one unit of work. The task is to find the minimum number of work is required to fulfill all the demands of those `N` houses.
+
+### Example:
+- **Input:** `N = 5`, `Arr[] = {5, -4, 1, -3, 1}`
+- **Output:** `9`
+- **Explanation:** 
+  1. The 1st house can sell 4 wine bottles to the 0th house. Total work needed = $4 \times (1-0) = 4$. The new state is `Arr[] = {1, 0, 1, -3, 1}`.
+  2. The 3rd house can sell wine to the 0th, 2nd, and 4th houses. Total work needed = $1 \times (3-0) + 1 \times (3-2) + 1 \times (4-3) = 5$.
+  3. Total work is $4 + 5 = 9$.
 
 ---
 

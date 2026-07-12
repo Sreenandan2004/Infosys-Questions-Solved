@@ -1,5 +1,16 @@
 # Largest Number
 
+## Problem Description & Example Test Case
+Given an array of strings `arr[]` of length `n` representing non-negative integers, arrange them in a manner, such that, after concatenating them in order, it results in the largest possible number. Since the result may be very large, return it as a string.
+
+### Example:
+- **Input:** `n = 5`, `arr[] = {"3", "30", "34", "5", "9"}`
+- **Output:** `"9534330"` (The arrangement "9534330" gives the largest value)
+- **Input:** `n = 4`, `arr[] = {"54", "546", "548", "60"}`
+- **Output:** `"6054854654"` (The arrangement "6054854654" gives the largest value)
+
+---
+
 ## Prerequisite Concepts
 Before diving into the solution, it is helpful to understand:
 - **Custom Sorting:** Sorting elements based on a user-defined comparison rule rather than default numerical or alphabetical ordering.
